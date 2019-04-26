@@ -1,0 +1,80 @@
+# desktop realtime system detail
+
+conky.config = {
+	alignment = 'top_right',
+	background = true,
+	color2 = '5D7B86',
+	cpu_avg_samples = 2,
+	default_color = 'F9FAF9',
+	double_buffer = true,
+	font = 'Bitstream Vera Sans:size=10',
+	draw_shades = false,
+	gap_x = 25,
+	gap_y = 13,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 1.0,
+	use_xft = true,
+}
+
+conky.text = [[
+${color FAEBD7} Down ${downspeed wlp3s0} k/s ${alignr}Up ${upspeed wlp3s0} k/s
+${color FAEBD7} ${downspeedgraph wlp3s0 25,107} ${alignr}${upspeedgraph wlp3s0 25,107}
+${color FAEBD7} Total ${totaldown wlp3s0} ${alignr}Total ${totalup wlp3s0}
+${color FAEBD7} Down ${downspeed enp2s0} k/s ${alignr}Up ${upspeed enp2s0} k/s
+${color FAEBD7} ${downspeedgraph enp2s0 25,107} ${alignr}${upspeedgraph enp2s0 25,107}
+${color FAEBD7} Total ${totaldown enp2s0} ${alignr}Total ${totalup enp2s0}
+${color FAEBD7} 
+${color FAEBD7} Time:$alignr${time %Y.%m.%d}$alignc   ${time %H:%M:%S}$alignr   Week:${time %w}
+${color FAEBD7} Hostname: $alignr$nodename
+${color FAEBD7} Kernel: $alignr$kernel
+${color FAEBD7} Machine:$alignr$machine
+${color FAEBD7} Uptime: $alignr$uptime
+${color FAEBD7} Temp: ${alignr}${acpitemp} °C
+${color FAEBD7} Battery:$alignr${battery_percent BAT0}%  
+${color FAEBD7} CPU: ${alignr}${freq dyn} MHz
+${color FAEBD7} Processes: ${alignr}$processes ($running_processes running)
+${color FAEBD7} Load: ${alignr}$loadavg
+${color FAEBD7} 
+${color FAEBD7} CPU1 ${alignr}${cpu cpu1}%
+${color FAEBD7} ${cpubar 4 cpu1}
+${color FAEBD7} CPU2 ${alignr}${cpu cpu2}%
+${color FAEBD7} ${cpubar 4 cpu2}
+${color FAEBD7} CPU3 ${alignr}${cpu cpu3}%
+${color FAEBD7} ${cpubar 4 cpu3}
+${color FAEBD7} CPU4 ${alignr}${cpu cpu4}%
+${color FAEBD7} ${cpubar 4 cpu4}
+${color FAEBD7} CPU5 ${alignr}${cpu cpu5}%
+${color FAEBD7} ${cpubar 4 cpu5}
+${color FAEBD7} CPU6 ${alignr}${cpu cpu6}%
+${color FAEBD7} ${cpubar 4 cpu6}
+${color FAEBD7} CPU7 ${alignr}${cpu cpu7}%
+${color FAEBD7} ${cpubar 4 cpu7}
+${color FAEBD7} CPU8 ${alignr}${cpu cpu8}%
+${color FAEBD7} ${cpubar 4 cpu8}
+${color FAEBD7} 
+${color FAEBD7} ram ${alignr}$mem / $memmax ($memperc%)
+${color FAEBD7} ${membar 4}
+${color FAEBD7} swap ${alignr}$swap / $swapmax ($swapperc%)
+${color FAEBD7} ${swapbar 4}
+${color FAEBD7} root ${alignr}${fs_free /} / ${fs_size /}
+${color FAEBD7} ${fs_bar 4 /}
+${color FAEBD7} 
+${color FAEBD7} 
+${color FAEBD7} TOP CPU $alignr CPU% MEM%
+${color FAEBD7} ${top name 1}$alignr${top cpu 1} ${top mem 1}
+${color FAEBD7} ${top name 2}$alignr${top cpu 2} ${top mem 2}
+${color FAEBD7} ${top name 3}$alignr${top cpu 3} ${top mem 3}
+${color FAEBD7} ${top name 4}$alignr${top cpu 4} ${top mem 4}
+${color FAEBD7} ${top name 5}$alignr${top cpu 5} ${top mem 5}
+${color FAEBD7} 
+${color FAEBD7} TOP MEM $alignr CPU% MEM%
+${color FAEBD7} ${top_mem name 1}$alignr${top_mem cpu 1} ${top_mem mem 1}
+${color FAEBD7} ${top_mem name 2}$alignr${top_mem cpu 2} ${top_mem mem 2}
+${color FAEBD7} ${top_mem name 3}$alignr${top_mem cpu 3} ${top_mem mem 3}
+${color FAEBD7} ${top_mem name 4}$alignr${top_mem cpu 4} ${top_mem mem 4}
+${color FAEBD7} ${top_mem name 5}$alignr${top_mem cpu 5} ${top_mem mem 5}
+]]
